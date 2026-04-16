@@ -1,0 +1,253 @@
+/* --- ESTILOS GENERALES --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    /* --- FONDO GIF "HASTA ATRÁS" --- */
+    /* Las comillas son importantes porque tu archivo tiene espacios en el nombre */
+    background-image: url('img/gfi/WhatsApp Video 2026-02-02 at 2.00.14 PM (2).gif');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Esto hace que el GIF se quede quieto al bajar */
+    
+    font-family: 'Montserrat', sans-serif;
+    min-height: 100vh;
+    
+    /* CENTRADO (Efecto Marco) */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px; 
+}
+
+/* --- TARJETA CENTRAL (CONTENIDO) --- */
+.container, .main-content {
+    /* Fondo oscuro semi-transparente para que el texto se lea sobre el GIF */
+    background-color: rgba(20, 20, 35, 0.9); 
+    
+    border: 1px solid rgba(199, 31, 77, 0.3); /* Borde sutil rojo cereza */
+    
+    width: 90%;
+    max-width: 1200px;
+    padding: 40px; 
+    border-radius: 12px; 
+    box-shadow: 0 30px 60px rgba(0,0,0,0.8); /* Sombra intensa para separar del fondo */
+    
+    color: #e0e0e0; /* TEXTO CLARO */
+    margin: 40px 0;
+}
+
+/* --- TIPOGRAFÍA ROJO CEREZA --- */
+h1, h2, h3, .nav-brand {
+    font-family: 'Playfair Display', serif;
+    color: #c71f4d; 
+}
+
+/* --- NAVEGACIÓN --- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* Línea sutil clara */
+    margin-bottom: 30px;
+}
+
+.nav-brand {
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #bbb; /* Gris claro */
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: color 0.3s;
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: #c71f4d; /* Rojo al pasar el mouse */
+}
+
+/* --- CARRITO --- */
+.cart-icon {
+    position: relative;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #bbb; /* Icono claro */
+    transition: transform 0.2s;
+}
+
+.cart-icon:hover {
+    transform: scale(1.1);
+    color: #c71f4d;
+}
+
+#cart-count {
+    position: absolute;
+    top: -8px;
+    right: -10px;
+    background-color: #c71f4d; /* Rojo */
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+    display: none;
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    color: #ccc; /* Texto descriptivo claro */
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.btn-elegant {
+    display: inline-block;
+    padding: 15px 45px;
+    border: 1px solid #c71f4d;
+    background: transparent;
+    color: #c71f4d;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    transition: all 0.3s ease;
+}
+
+.btn-elegant:hover {
+    background: #c71f4d;
+    color: #fff;
+}
+
+/* --- SECCIÓN PRODUCTOS --- */
+.products-preview {
+    padding: 40px 0;
+    text-align: center;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+/* TARJETAS DE PRODUCTO OSCURAS */
+.product-card {
+    background: rgba(255, 255, 255, 0.05); /* Efecto vidrio oscuro sutil */
+    padding: 30px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    width: 300px;
+    border-radius: 8px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    background: rgba(255, 255, 255, 0.1); /* Un poco más claro al pasar el mouse */
+}
+
+.product-card h3 {
+    margin-bottom: 10px;
+    color: #c71f4d;
+}
+
+.btn-add {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #c71f4d;
+    border: none;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-add:hover {
+    background-color: #a1153b;
+}
+
+/* --- BUSCADOR OSCURO --- */
+.search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1); /* Fondo claro transparente */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    padding: 8px 20px;
+    margin-right: 25px;
+    transition: all 0.4s ease;
+}
+
+.search-box:hover, 
+.search-box:focus-within {
+    background: rgba(0, 0, 0, 0.3); /* Se oscurece al usarlo */
+    border-color: #c71f4d;
+}
+
+.search-box input {
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff; /* Texto blanco al escribir */
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    width: 200px;
+}
+
+.search-box input::placeholder {
+    color: #aaa; /* Placeholder claro */
+}
+
+.btn-search {
+    background: transparent;
+    border: none;
+    color: #c71f4d;
+    cursor: pointer;
+    font-size: 1.1rem;
+    margin-left: 10px;
+    transition: transform 0.3s;
+}
+
+.btn-search:hover {
+    transform: scale(1.2);
+}
+
+/* CARRUSEL */
+.carousel-caption {
+     background: rgba(0,0,0,0.7) !important; 
+     border-radius: 5px;
+}
